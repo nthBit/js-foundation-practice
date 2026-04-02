@@ -9,46 +9,32 @@
 <body>
 
     <script>
-        // how to print to console
-        console.log("Hello, world!")
 
-        // how to declare a variable
-        let firstName = "John";
-        let lastName = "Doe";
+        // capitalize
+        function capitalize(word) {
+            let letterList = [];
+            let wordLength = word.length;
+            
+            for (i = 0; i < wordLength; i++) {
+                if (i === 0) {
+                    letterList.push(word[i].toUpperCase());
+                } else {
+                    letterList.push(word[i].toLowerCase());
+                }
+            } 
+            let finalWord = letterList.join("");
+            return finalWord;
+        }
 
-        console.log(firstName);
-        console.log(lastName);
+        console.log(capitalize("gOOd"));
 
-        let age = 34;
-        console.log(age);
+        // last letter
+        function lastLetter(word) {
+            let wordLength = word.length;
+            return word[wordLength - 1];
+        }
 
-        age = 35;
-        console.log(age);
-
-        // how to declare a constant
-        const pi = 3.14;
-        console.log(pi);
-
-        // note that this throws an error
-        // pi = 10;
-        // console.log(pi);
-
-        // testing maths in js
-        console.log(23 + 97);
-        console.log(20 + 63 + 98 + 1 + 7 + 304);
-        console.log((4 + 6 + 9) / 77);
-
-        let a = 10;
-        console.log(a);
-        a = 69;
-        console.log(a);
-        let b = 7 * a;
-        console.log(b);
-
-        const max = 57;
-        const actual = max - 13;
-        const percentage = actual / max;
-        console.log(percentage);
+        console.log(lastLetter("Good"));
 
     </script>
     
